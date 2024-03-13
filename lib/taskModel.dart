@@ -14,10 +14,10 @@ class TaskModel {
     return TaskModel(
       id: (map["id"] ?? 0) as int,
       title: (map["title"] ?? '') as String,
-      createdAt: DateTime.fromMillisecondsSinceEpoch(map["createdAt"])
+      createdAt: DateTime.fromMillisecondsSinceEpoch(map["created_at"])
           .toIso8601String(),
-      updatedAt: map['updatedAt'] != null
-          ? DateTime.fromMillisecondsSinceEpoch(map["updatedAt"])
+      updatedAt: map['updated_at'] != null
+          ? DateTime.fromMillisecondsSinceEpoch(map["updated_at"])
               .toIso8601String()
           : null,
     );
